@@ -22,11 +22,10 @@ class CreateNutrientsTable extends Migration
             $table->float('lipid', 8, 2)->comment('脂質');
             $table->float('sugar', 8, 2)->comment('糖質');
             $table->float('fiber', 8, 2)->comment('食物繊維');
-            $table->integer('number', 255)->comment('購入個数');
-            $table->data('date')->comment('登録日');
+            $table->integer('number')->comment('購入個数');
+            $table->date('date')->comment('登録日');
             $table->integer('user_id')->unsigned(); // 符号無し属性に変更
-            $table->foreign('user_id')->references('id')->on('users')
-                    ->onDelete('cascade')->comment('ユーザーid'); // 外部キー参照
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->comment('ユーザーid'); // 外部キー参照
         });
     }
 
