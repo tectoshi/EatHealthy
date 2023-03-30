@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
+class ComposerStaticInit03f6c675277b6d507edfedc51e46e344
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -121,6 +121,7 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
             'Laravel\\SerializableClosure\\' => 28,
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
+            'Laravel\\Breeze\\' => 15,
         ),
         'I' => 
         array (
@@ -320,8 +321,8 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -386,6 +387,10 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
         'Laravel\\Sail\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
+        ),
+        'Laravel\\Breeze\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/breeze/src',
         ),
         'Illuminate\\Support\\' => 
         array (
@@ -503,6 +508,14 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
+        'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
+        'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
+        'App\\Http\\Controllers\\Auth\\EmailVerificationPromptController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationPromptController.php',
+        'App\\Http\\Controllers\\Auth\\NewPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/NewPasswordController.php',
+        'App\\Http\\Controllers\\Auth\\PasswordResetLinkController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/PasswordResetLinkController.php',
+        'App\\Http\\Controllers\\Auth\\RegisteredUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisteredUserController.php',
+        'App\\Http\\Controllers\\Auth\\VerifyEmailController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerifyEmailController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -513,12 +526,15 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
+        'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'Asm89\\Stack\\Cors' => __DIR__ . '/..' . '/asm89/stack-cors/src/Cors.php',
         'Asm89\\Stack\\CorsService' => __DIR__ . '/..' . '/asm89/stack-cors/src/CorsService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
@@ -2670,6 +2686,11 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
+        'Laravel\\Breeze\\BreezeServiceProvider' => __DIR__ . '/..' . '/laravel/breeze/src/BreezeServiceProvider.php',
+        'Laravel\\Breeze\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallCommand.php',
+        'Laravel\\Breeze\\Console\\InstallsApiStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsApiStack.php',
+        'Laravel\\Breeze\\Console\\InstallsBladeStack' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsBladeStack.php',
+        'Laravel\\Breeze\\Console\\InstallsInertiaStacks' => __DIR__ . '/..' . '/laravel/breeze/src/Console/InstallsInertiaStacks.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',
         'Laravel\\Sail\\SailServiceProvider' => __DIR__ . '/..' . '/laravel/sail/src/SailServiceProvider.php',
@@ -2730,6 +2751,12 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
         'League\\CommonMark\\Event\\DocumentPreRenderEvent' => __DIR__ . '/..' . '/league/commonmark/src/Event/DocumentPreRenderEvent.php',
         'League\\CommonMark\\Event\\DocumentRenderedEvent' => __DIR__ . '/..' . '/league/commonmark/src/Event/DocumentRenderedEvent.php',
         'League\\CommonMark\\Event\\ListenerData' => __DIR__ . '/..' . '/league/commonmark/src/Event/ListenerData.php',
+        'League\\CommonMark\\Exception\\AlreadyInitializedException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/AlreadyInitializedException.php',
+        'League\\CommonMark\\Exception\\CommonMarkException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/CommonMarkException.php',
+        'League\\CommonMark\\Exception\\IOException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/IOException.php',
+        'League\\CommonMark\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/InvalidArgumentException.php',
+        'League\\CommonMark\\Exception\\LogicException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/LogicException.php',
+        'League\\CommonMark\\Exception\\MissingDependencyException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/MissingDependencyException.php',
         'League\\CommonMark\\Exception\\UnexpectedEncodingException' => __DIR__ . '/..' . '/league/commonmark/src/Exception/UnexpectedEncodingException.php',
         'League\\CommonMark\\Extension\\Attributes\\AttributesExtension' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Attributes/AttributesExtension.php',
         'League\\CommonMark\\Extension\\Attributes\\Event\\AttributesListener' => __DIR__ . '/..' . '/league/commonmark/src/Extension/Attributes/Event/AttributesListener.php',
@@ -2962,6 +2989,7 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
         'League\\CommonMark\\Parser\\MarkdownParserInterface' => __DIR__ . '/..' . '/league/commonmark/src/Parser/MarkdownParserInterface.php',
         'League\\CommonMark\\Parser\\MarkdownParserState' => __DIR__ . '/..' . '/league/commonmark/src/Parser/MarkdownParserState.php',
         'League\\CommonMark\\Parser\\MarkdownParserStateInterface' => __DIR__ . '/..' . '/league/commonmark/src/Parser/MarkdownParserStateInterface.php',
+        'League\\CommonMark\\Parser\\ParserLogicException' => __DIR__ . '/..' . '/league/commonmark/src/Parser/ParserLogicException.php',
         'League\\CommonMark\\Reference\\Reference' => __DIR__ . '/..' . '/league/commonmark/src/Reference/Reference.php',
         'League\\CommonMark\\Reference\\ReferenceInterface' => __DIR__ . '/..' . '/league/commonmark/src/Reference/ReferenceInterface.php',
         'League\\CommonMark\\Reference\\ReferenceMap' => __DIR__ . '/..' . '/league/commonmark/src/Reference/ReferenceMap.php',
@@ -2977,6 +3005,7 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
         'League\\CommonMark\\Renderer\\Inline\\NewlineRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/Inline/NewlineRenderer.php',
         'League\\CommonMark\\Renderer\\Inline\\TextRenderer' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/Inline/TextRenderer.php',
         'League\\CommonMark\\Renderer\\MarkdownRendererInterface' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/MarkdownRendererInterface.php',
+        'League\\CommonMark\\Renderer\\NoMatchingRendererException' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/NoMatchingRendererException.php',
         'League\\CommonMark\\Renderer\\NodeRendererInterface' => __DIR__ . '/..' . '/league/commonmark/src/Renderer/NodeRendererInterface.php',
         'League\\CommonMark\\Util\\ArrayCollection' => __DIR__ . '/..' . '/league/commonmark/src/Util/ArrayCollection.php',
         'League\\CommonMark\\Util\\Html5EntityDecoder' => __DIR__ . '/..' . '/league/commonmark/src/Util/Html5EntityDecoder.php',
@@ -5397,6 +5426,11 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
         'Symfony\\Polyfill\\Php80\\PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/PhpToken.php',
         'Symfony\\Polyfill\\Php81\\Php81' => __DIR__ . '/..' . '/symfony/polyfill-php81/Php81.php',
         'Tests\\CreatesApplication' => __DIR__ . '/../..' . '/tests/CreatesApplication.php',
+        'Tests\\Feature\\Auth\\AuthenticationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/AuthenticationTest.php',
+        'Tests\\Feature\\Auth\\EmailVerificationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/EmailVerificationTest.php',
+        'Tests\\Feature\\Auth\\PasswordConfirmationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/PasswordConfirmationTest.php',
+        'Tests\\Feature\\Auth\\PasswordResetTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/PasswordResetTest.php',
+        'Tests\\Feature\\Auth\\RegistrationTest' => __DIR__ . '/../..' . '/tests/Feature/Auth/RegistrationTest.php',
         'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
         'Tests\\Unit\\ExampleTest' => __DIR__ . '/../..' . '/tests/Unit/ExampleTest.php',
@@ -5446,10 +5480,10 @@ class ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit4eb0b1212d0486f2e03728e39a6e9bb7::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit03f6c675277b6d507edfedc51e46e344::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit03f6c675277b6d507edfedc51e46e344::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit03f6c675277b6d507edfedc51e46e344::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit03f6c675277b6d507edfedc51e46e344::$classMap;
 
         }, null, ClassLoader::class);
     }

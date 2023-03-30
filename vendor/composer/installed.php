@@ -1,8 +1,8 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => 'v8.6.12',
-        'version' => '8.6.12.0',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
         'reference' => NULL,
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
@@ -385,6 +385,15 @@
                 0 => '*',
             ),
         ),
+        'laravel/breeze' => array(
+            'pretty_version' => 'v1.10.0',
+            'version' => '1.10.0.0',
+            'reference' => 'e98e855ab4bde5bf0083c4a4d73c0f5b474241ae',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laravel/breeze',
+            'aliases' => array(),
+            'dev_requirement' => true,
+        ),
         'laravel/framework' => array(
             'pretty_version' => 'v8.83.27',
             'version' => '8.83.27.0',
@@ -395,8 +404,8 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v8.6.12',
-            'version' => '8.6.12.0',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
             'reference' => NULL,
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
@@ -440,9 +449,9 @@
             'dev_requirement' => false,
         ),
         'league/commonmark' => array(
-            'pretty_version' => '2.3.9',
-            'version' => '2.3.9.0',
-            'reference' => 'c1e114f74e518daca2729ea8c4bf1167038fa4b5',
+            'pretty_version' => '2.4.0',
+            'version' => '2.4.0.0',
+            'reference' => 'd44a24690f16b8c1808bf13b1bd54ae4c63ea048',
             'type' => 'library',
             'install_path' => __DIR__ . '/../league/commonmark',
             'aliases' => array(),
@@ -635,9 +644,9 @@
             'dev_requirement' => true,
         ),
         'phpunit/phpunit' => array(
-            'pretty_version' => '9.6.5',
-            'version' => '9.6.5.0',
-            'reference' => '86e761949019ae83f49240b2f2123fb5ab3b2fc5',
+            'pretty_version' => '9.6.6',
+            'version' => '9.6.6.0',
+            'reference' => 'b65d59a059d3004a040c16a82e07bbdf6cfdd115',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpunit/phpunit',
             'aliases' => array(),
@@ -730,8 +739,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -750,9 +759,9 @@
             ),
         ),
         'psy/psysh' => array(
-            'pretty_version' => 'v0.11.12',
-            'version' => '0.11.12.0',
-            'reference' => '52cb7c47d403c31c0adc9bf7710fc355f93c20f7',
+            'pretty_version' => 'v0.11.14',
+            'version' => '0.11.14.0',
+            'reference' => '8c2e264def7a8263a68ef6f0b55ce90b77d41e17',
             'type' => 'library',
             'install_path' => __DIR__ . '/../psy/psysh',
             'aliases' => array(),
