@@ -1,17 +1,20 @@
 <!--  カテゴリープルダウン -->
 <form action="{{ route('food.store') }}" method="POST">
+    <x-label for="date" :value="__('購入日')" />
+    <x-input id="date" class="block mt-1 w-full" type="date" name="date" :value="old('date')" required autofocus />
     <div class="form-group">
-        <label for="category-id">{{ __('食材') }}<span class="badge badge-danger ml-2">{{ __('必須') }}</span></label>
-        <select class="form-control" id="category-id" name="category_id">
+        @csrf
+        <label for="food-id">{{ __('食材') }}<span class="badge badge-danger ml-2">{{ __('必須') }}</span></label>
+        <select class="form-control" id="food_id" name="food_id">
             @foreach($foods as $key => $food)
-                <option value="{{ $key }}">{{ $food }}</option>
+                <option value="{{ $key + 1 }}">{{ $food }}</option>
             @endforeach
         </select>
-    </div>
+{{--    </div>--}}
 
-    <div class="form-group">
-        <label for="category-id">{{ __('個数') }}<span class="badge badge-danger ml-2">{{ __('必須') }}</span></label>
-        <select class="form-control" id="category-id" name="category_id">
+{{--    <div class="form-group">--}}
+        <label for="food_num">{{ __('個数') }}<span class="badge badge-danger ml-2">{{ __('必須') }}</span></label>
+        <select class="form-control" id="food_num" name="food_num">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

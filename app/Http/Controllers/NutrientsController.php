@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+use App\Models\Nutrient;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class NutrientsController extends Controller
 {
@@ -34,7 +37,17 @@ class NutrientsController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $nutrientModel = new Nutrient();
+        $id = $request['food_id'];
+        $num = $request['food_num'];
+        $date = $request['date'];
+        $foodNutrient = $nutrientModel->index($id);
+        $nutrientSum = $nutrientModel->calculate($foodNutrient, $num);
+        $nutrientSum['number'] = $num;
+        $nutrientSum['date'] = $date;
+        $userId = Auth::id();
+        $nutrientSum['user_id'] = $userId;
+        Nutrient::insert($nutrientSum);
         return view('nutrients');
     }
 
