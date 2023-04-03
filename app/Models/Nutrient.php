@@ -10,7 +10,7 @@ class Nutrient extends Model
 {
     use HasFactory;
 
-    public function index($id)
+    public function findOne($id)
     {
         $food = DB::table('basis')->find($id);
         return $food;
@@ -32,7 +32,7 @@ class Nutrient extends Model
         $sugar         = $sugar         * $num;
         $fiber         = $fiber         * $num;
 
-        $nutrientSum = array
+        return array
             (
                 'name'          => $name,
                 'calorie'       => $calorie,
@@ -42,7 +42,5 @@ class Nutrient extends Model
                 'sugar'         => $sugar,
                 'fiber'         => $fiber,
             );
-
-        return $nutrientSum;
     }
 }

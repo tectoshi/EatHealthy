@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('/food', [BasisController::class, 'index'])->name('food.index');
 Route::post('/nutrients', [NutrientsController::class, 'store'])->name('food.store');
+Route::get('/nutrients', [NutrientsController::class, 'index'])->name('nutrients.index');
 
 
 Route::get('/dashboard', function () {
