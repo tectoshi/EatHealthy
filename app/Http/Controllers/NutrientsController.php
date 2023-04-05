@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Nutrient;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -17,11 +18,17 @@ class NutrientsController extends Controller
      */
     public function index()
     {
+        $id = Auth::id();
+        $userModel = new User();
         $fromTo = $this->thisWeek();
         $nutrientsWeekSum = $this->getNutrientsSum($fromTo);
-
-        $this->targetNutrients();
-        return view('nutrients',compact('fromTo','nutrientsWeekSum'));
+        $age = $userModel->getAge($id);
+        $sex = $userModel->getSex($id);
+        $BMI = $userModel->getBMI($id);
+        $bestWeight = $userModel->getBestWeight($id);
+        $targetNutrients = $this->targetNutrients($age);
+        $comparison = $this->comparisonNutrients($nutrientsWeekSum, $targetNutrients);
+        return view('nutrients',compact('fromTo','comparison','age','sex','BMI','bestWeight','nutrientsWeekSum','targetNutrients'));
     }
 
     /**
@@ -145,11 +152,52 @@ class NutrientsController extends Controller
         );
     }
 
-    public function getage()
-
-    public function targetNutrients()
+    public function targetNutrients($age)
     {
-
+        if (Auth::user()->sex === 1)
+        {
+            $calorie = (13.397 * Auth::user()->weight + 4.799 * Auth::user()->height - 5.677 * $age + 88.632) * 7 * 1.75;
+            $carbohydrates = 310 * 7;
+            $protein       = 65 * 7;
+            $lipid         = 55 * 7;
+            $sugar         = 330 * 7;
+            $fiber         = 21 * 7;
+        }elseif (Auth::user()->sex === 2)
+        {
+            $calorie = (9.247 * Auth::user()->weight + 3.098 * Auth::user()->height - 4.33 * $age + 447.593) * 7 * 1.75;
+            $carbohydrates = 270 * 7;
+            $protein       = 50 * 7;
+            $lipid         = 45 * 7;
+            $sugar         = 270 * 7;
+            $fiber         = 18 * 7;
+        }
+        return array(
+            'calorie'       => $calorie,
+            'carbohydrates' => $carbohydrates,
+            'protein'       => $protein,
+            'lipid'         => $lipid,
+           'sugar'          => $sugar,
+            'fiber'         => $fiber
+        );
     }
+
+    public function comparisonNutrients($nutrientsWeekSum,$targetNutrients)
+    {
+        $calorie       = $nutrientsWeekSum['calorie'] / $targetNutrients['calorie'] * 100;
+        $carbohydrates = $nutrientsWeekSum['carbohydrates'] / $targetNutrients['carbohydrates'] * 100;
+        $protein       = $nutrientsWeekSum['protein'] / $targetNutrients['protein'] * 100;
+        $lipid         = $nutrientsWeekSum['lipid'] / $targetNutrients['lipid'] * 100;
+        $sugar         = $nutrientsWeekSum['sugar'] / $targetNutrients['sugar'] * 100;
+        $fiber         = $nutrientsWeekSum['fiber'] / $targetNutrients['fiber'] * 100;
+        return array(
+            'calorie'       => $calorie,
+            'carbohydrates' => $carbohydrates,
+            'protein'       => $protein,
+            'lipid'         => $lipid,
+            'sugar'         => $sugar,
+            'fiber'         => $fiber
+        );
+    }
+
 }
 

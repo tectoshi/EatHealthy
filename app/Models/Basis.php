@@ -12,7 +12,7 @@ class Basis extends Model
 
     public function pullDownFoods()
     {
-        $foods = DB::table('basis')->pluck('name');
+        $foods = DB::table('basis')->get();
         return $foods;
     }
 }

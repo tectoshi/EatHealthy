@@ -6,8 +6,8 @@
         @csrf
         <label for="food-id">{{ __('食材') }}<span class="badge badge-danger ml-2">{{ __('必須') }}</span></label>
         <select class="form-control" id="food_id" name="food_id">
-            @foreach($foods as $key => $food)
-                <option value="{{ $key + 1 }}">{{ $food }}</option>
+            @foreach($foods as $food)
+                <option value="{{ $food->id }}">{{ $food->name }}</option>
             @endforeach
         </select>
 {{--    </div>--}}
